@@ -21,7 +21,9 @@ be found at [https://hexdocs.pm/crc_itu](https://hexdocs.pm/crc_itu).
 
 # Usage
 
-```
+```elixir
+
 iex(1)> CRCITU.crc_itu("05010001")
 "D9DC"
+
 ```
