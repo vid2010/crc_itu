@@ -1,6 +1,6 @@
-# CrcItu
+# CRC-ITU
 
-**TODO: Add description**
+This module is used to calculate CRC (Cyclic Redundancy Check) values for binary data. It uses the `CRC-ITU` algorithm for the `crc` calculation.
 
 ## Installation
 
@@ -19,4 +19,9 @@ Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_do
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/crc_itu](https://hexdocs.pm/crc_itu).
 
-# crc_itu
+# Usage
+
+```
+iex(1)> CRCITU.crc_itu("05010001")
+"D9DC"
+```
