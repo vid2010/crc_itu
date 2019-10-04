@@ -9,5 +9,4 @@ defmodule CRCITUTest do
   test "Test2" do
     assert CRCITU.crc_itu("0D0101234567890123450001") == "8CDD"
   end
-
 end

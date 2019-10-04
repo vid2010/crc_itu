@@ -263,16 +263,16 @@ defmodule CRCITU do
     0x0F78
   ]
 
-@doc """
-Returns the crc code for the CRC-ITU based algorithm.
-"""
-@spec  crc_itu(data: String) :: String
+  @doc """
+  Returns the crc code for the CRC-ITU based algorithm.
+  """
+  @spec crc_itu(String) :: String
   def crc_itu(data) do
     raw_data =
       data
       |> fill_even_zero
 
-     process_crc_data(data, 0xFFFF, 0, String.length(raw_data))
+    process_crc_data(data, 0xFFFF, 0, String.length(raw_data))
     |> bxor(0xFFFF)
     |> Integer.to_string(16)
   end
@@ -287,7 +287,6 @@ Returns the crc code for the CRC-ITU based algorithm.
         )
       )
 
-    
     process_crc_data(data, crc, len + 2, data_len)
   end
 
@@ -295,6 +294,7 @@ Returns the crc code for the CRC-ITU based algorithm.
 
   @doc """
   Check the string length is even or not, if length even returns string else returns the string with prefix "0" in it.
+
   """
   @spec fill_even_zero(String) :: String
   defp fill_even_zero(str) do
